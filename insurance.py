@@ -19,7 +19,6 @@ print(f"This person's insurance cost is {insurance_cost} dollars")
 #Age factor
 age += 4
 new_insurance_cost = 250*age - 128*sex + 370*bmi + 425*num_of_children + 24000*smoker - 12500 
-
 change_in_insurane_cost = new_insurance_cost - insurance_cost
 print(f"The change in cost of insurance after increasing the age by 4 years is {change_in_insurane_cost} dollars")
 
