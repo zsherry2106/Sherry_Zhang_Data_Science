@@ -8,13 +8,13 @@ os.system('cls')
 
 while 1:
     while 1:
-        mario_size = input("Size for Mario tower: ")
+        mario_size = input("Size for Mario tower (1-25): ")
 
         try:
             mario_size = int(mario_size)
             space = mario_size
 
-            if 0 < mario_size < 26:
+            if 0 < mario_size < 26 or mario_size == -1:
                 break
 
             else:
@@ -26,7 +26,7 @@ while 1:
     if mario_size == -1:
         break
 
-    mario_size += 1
+    space -= 1
 
     for i in range(mario_size):
         print(" "*space, end='')
