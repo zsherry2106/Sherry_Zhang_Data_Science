@@ -72,3 +72,14 @@ male_info = []
 for row in insurance_data:
     if row[1] == 1:
         male_info.append(row)
+
+#Create with only smokers and one with only non smokers
+smoker_info = []
+for row in insurance_data:
+    if row[4] == 1:
+        smoker_info.append(row)
+
+non_smoker_info = []
+for row in insurance_data:
+    if row[4] == 0:
+        non_smoker_info.append(row)
