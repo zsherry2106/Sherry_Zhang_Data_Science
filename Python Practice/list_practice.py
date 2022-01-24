@@ -24,11 +24,7 @@ print(list2)
 
 #Remove empty strings
 list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
-list2 = []
-for i in list1:
-    if i != "":
-        list2.append(i)
-print(list2)
+print(list(filter(None, list1)))
 
 #Add 7000 after occurrence of 6000
 list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
