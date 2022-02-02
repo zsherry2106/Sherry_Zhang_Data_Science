@@ -4,7 +4,6 @@
 #Diversity data code analysis/prep
 
 import os, csv
-from tracemalloc import stop
 os.system('cls')
 
 file = open('diversity_school.csv')
@@ -37,7 +36,7 @@ for row in div_data:
     if row[3] == 'Total Minority':
         states_minority[row[2]] += int(row[4])
 
-# print(states_minority)
+print(states_minority)
 
 
 
@@ -47,7 +46,7 @@ for row in div_data:
     if row[3] == 'Total Minority':
         states_college_num[row[2]] += 1
 
-# print(states_college_num)
+print(states_college_num)
 
 
 
@@ -83,7 +82,7 @@ for state in ethnic_groups_state:
     
     greatest_ethnic_state[state] = {largest_group: num}
 
-# print(greatest_ethnic_state)
+print(greatest_ethnic_state)
 
 #Add percentage column to list of data
 for row in div_data:
@@ -91,7 +90,6 @@ for row in div_data:
         
 header.append('percentage')
 
-print(div_data)
 
 out_file = open("div_percentage.csv", "w", newline = '')
 writer = csv.writer(out_file)
