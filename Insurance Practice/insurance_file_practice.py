@@ -7,7 +7,7 @@
 import os, csv
 os.system('cls')
 
-file = open('insurance_data.csv')
+file = open('Insurance Practice\insurance_data.csv')
 insuranceFile = csv.reader(file)
 
 #Next - get the next value
