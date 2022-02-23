@@ -17,6 +17,8 @@ three_letter = []
 four_letter = []
 five_letter = []
 
+this_folder = os.path.dirname(os.path.abspath(__file__))
+
 for i in words:
     if '-' not in i:
         if len(i) == 3:
@@ -70,6 +72,7 @@ while choice < 4 and playing_count < 3:
         random_word = selectWord(choice)
         score = 0
         playing_count += 1
+        print(random_word)
 
         #create character lists with _ to display guesses
         char_list = ["_ "] * len(random_word)
@@ -129,4 +132,11 @@ while choice < 4 and playing_count < 3:
         print("\nthe word was", random_word)
         print("your score was", score)
         char_list = []
-    
+        choice = Menu()
+
+#If player exits at the beginning, do not run this code
+if len(high_score) != 0:
+    #adds highscore to txt file
+    with open(os.path.join(this_folder, 'hangman.json'), "a") as myfile:
+        new_score = {name: score}
+        json.dump(f",\n {new_score}", myfile)
