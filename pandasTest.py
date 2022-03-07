@@ -17,6 +17,8 @@ print()
 df3 = pd.DataFrame([[1, 't-skirt', 'blue'], [2, 't-skirt', 'green'], [3, 'skirt', 'red'], [4, 'skirt', 'black']],
 columns=['Product ID', 'Product Name', 'Color'])
 
+df3.to_file('wardrobe.csv')
+
 print(df3)
 print()
 
