@@ -17,7 +17,7 @@ print()
 df3 = pd.DataFrame([[1, 't-skirt', 'blue'], [2, 't-skirt', 'green'], [3, 'skirt', 'red'], [4, 'skirt', 'black']],
 columns=['Product ID', 'Product Name', 'Color'])
 
-df3.to_file('wardrobe.csv')
+# df3.to_file('wardrobe.csv')
 
 print(df3)
 print()
@@ -41,3 +41,20 @@ for index in range(len(ins)):
 ins['Cost'] = insurance_cost_total
 
 print(ins)
+
+
+assignment = pd.DataFrame([
+        ['Amy', 'Assignment 1', 75],
+        ['Amy', 'Assignment 2', 35],
+        ['Amy', 'Assignment 3', 80],
+        ['Amy', 'Assignment 4', 55],
+        ['Bob', 'Assignment 1', 99],
+        ['Bob', 'Assignment 2', 35],
+        ['Bob', 'Assignment 1', 0],
+        ['Bob', 'Assignment 2', 70]
+        ], columns = ['Name', 'Assignment', 'Grade']
+)
+print(assignment.groupby('Name').Grade.mean())
+print(assignment.groupby('Name').Grade.std())
+print(assignment.groupby('Name').Grade.median())
+print(assignment.groupby('Name').Grade.count())
